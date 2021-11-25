@@ -1,0 +1,12 @@
+clc;
+A=zeros(30,30);
+A(:,1)=ones(30,1);
+A(:,30)=ones(30,1);
+A(1,:)=ones(1,30);
+A(30,:)=ones(1,30);
+A(18:22,16:20)=ones(5,5);
+A(8:11,8:11)=ones(4,4);
+%A(21:50,64:68)=ones(30,5);
+%A(51:54,101:130)=ones(4,30);
+map = binaryOccupancyMap(A);
+show(map);hold on;
