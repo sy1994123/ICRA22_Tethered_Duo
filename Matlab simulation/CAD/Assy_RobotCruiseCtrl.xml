@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="03/17/20||18:21:28" using="Simscape Multibody Link Version 6.1" from="SolidWorks 24.0.0"/>
+<ModelUnits mass="kilogram" length="meter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Assy_RobotCruiseCtrl" uid="Assy_RobotCruiseCtrl" version="118">
+<AssemblyFile name="Assy_RobotCruiseCtrl.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="Venue-1" uid="Venue-1" grounded="true" entityUid="Venue*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Assy_WheelRobot-1" uid="Assy_WheelRobot-1" entityUid="Assy_WheelRobot" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0.009999999999999995 0.75</Translation>
+</Transform>
+<Instance name="Platform-1" uid="Platform-1" grounded="true" entityUid="Platform*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.75294117647058822" g="1" b="1" a="1"/>
+<Diffuse r="0.75294117647058822" g="1" b="1" a="1"/>
+<Specular r="0.37647058823529411" g="0.5" b="0.5" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Wheel-4" uid="Wheel-4" entityUid="Wheel*:*Default">
+<Transform>
+<Rotation>0 -1 0 -1 0 0 0 0 -1</Rotation>
+<Translation>0 0.010000000000000002 0.035000000000000031</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="0.75294117647058822" b="1" a="1"/>
+<Diffuse r="1" g="0.75294117647058822" b="1" a="1"/>
+<Specular r="0.5" g="0.37647058823529411" b="0.5" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Wheel-1" uid="Wheel-1" entityUid="Wheel*:*Default">
+<Transform>
+<Rotation>0 1 0 -1.0000000000000002 0 0 0 0 1.0000000000000002</Rotation>
+<Translation>-0.057500000000000002 0.010000000000000002 -0.010000000000000009</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="0.75294117647058822" a="1"/>
+<Diffuse r="1" g="1" b="0.75294117647058822" a="1"/>
+<Specular r="0.5" g="0.5" b="0.37647058823529411" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Wheel-2" uid="Wheel-2" entityUid="Wheel*:*Default">
+<Transform>
+<Rotation>0 -1 0 -1 0 0 0 0 -1</Rotation>
+<Translation>0.057500000000000002 0.010000000000000002 -0.010000000000000009</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="0.75294117647058822" a="1"/>
+<Diffuse r="1" g="1" b="0.75294117647058822" a="1"/>
+<Specular r="0.5" g="0.5" b="0.37647058823529411" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Distance name="Distance1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Assy_RobotCruiseCtrl</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Assy_WheelRobot-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Distance>
+<Coincident name="Coincident2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Assy_WheelRobot-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Assy_RobotCruiseCtrl</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Tangent name="Tangent1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Venue-1</Uid>
+</InstancePath>
+<Position>0 0.0050000000000000001 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Assy_WheelRobot-1</Uid>
+<Uid>Wheel-2</Uid>
+</InstancePath>
+<Position>0 0.0025000000000000022 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Tangent>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="Assy_WheelRobot" uid="Assy_WheelRobot" version="128">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Assy_WheelRobot.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="Platform" uid="Platform*:*Default" version="159">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Platform.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.073187223392972303</Mass>
+<CenterOfMass>-2.9546702738392743e-12 0.012476525158316154 -0.00098027547154227882</CenterOfMass>
+<Inertia>2.2591344380516228e-05 6.399354391449692e-05 4.8964940070527438e-05 1.7637570782952103e-08 9.2352565300255046e-15 -6.9716578221940584e-16</Inertia>
+</MassProperties>
+<GeometryFile name="Platform_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Venue" uid="Venue*:*Default" version="130">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="Venue.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>20</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>6.6668333333333329 8.3333333333333339 1.6668333333333334 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Venue_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Wheel" uid="Wheel*:*Default" version="153">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Wheel.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0023844688240746517</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>1.4085821536221952e-07 2.7524946224702455e-07 1.4085821536221957e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Wheel_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
